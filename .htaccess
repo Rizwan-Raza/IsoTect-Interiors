@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+#AddHandler application/x-httpd-lsphp .htm .html
+#AddHandler application/x-httpd-lsphp .htm .html
+AddType application/x-httpd-php .html
