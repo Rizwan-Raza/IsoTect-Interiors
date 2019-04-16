@@ -479,22 +479,8 @@ nav ul li a {
     color: #3d85c6 !important
 }
 
-.brand-logo h1 {
-    font-size: 2.1rem;
-    margin: 0;
-    display: inline;
-    line-height: 56px
-}
-
-.brand-logo {
-    font-family: "Bell Mt Bold"
-}
-
 .brand-img {
-    padding-left: 16px;
-    padding-right: 8px;
     height: 50px;
-    margin-top: 6px;
     margin-bottom: -12px
 }
 
@@ -623,7 +609,7 @@ nav ul li a {
 }
 
 hr.short-border {
-    border: 2px solid #3d85c6;
+    border: 2px solid #05601b;
     width: 100px;
     margin: 0 auto
 }
@@ -799,17 +785,6 @@ footer .left.shift-left {
     .scrollable {
         height: calc(100vh - 56px)
     }
-
-    nav .brand-logo {
-        left: 40px;
-        transform: none;
-        padding-left: 1rem
-    }
-
-    nav .brand-img {
-        display: none
-    }
-
 }
 
 @media (max-width:400px) {

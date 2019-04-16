@@ -29,6 +29,12 @@
         .btn-floating:not(.btn-large) i {
             font-size: 1.3rem;
         }
+
+        #testimonial .carousel-item {
+            opacity: 1 !important;
+            width: 400px;
+            height: auto;
+        }
     </style>
 </head>
 
@@ -227,6 +233,49 @@
         </div>
     </section>
 
+    <section class="p-4 grey lighten-2" id="testimonial">
+        <h3 class="text-capitalize center-align px-2 fw-600 text-primary">What People say</h3>
+        <!-- <hr class="short-border" /> -->
+
+        <div class="carousel">
+            <div class="carousel-item card-panel">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum incidunt ex porro ut fugiat iste
+                    atque maxime omnis, vel debitis quis maiores expedita doloribus quibusdam dolor itaque optio
+                    sapiente cupiditate.
+                </p>
+                <h4 class="right-align">- Anonymous</h4>
+            </div>
+            <div class="carousel-item card-panel">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum incidunt ex porro ut fugiat iste
+                    atque maxime omnis, vel debitis quis maiores expedita doloribus quibusdam dolor itaque optio
+                    sapiente cupiditate.
+                </p>
+                <h4 class="right-align">- Anonymous</h4>
+            </div>
+            <div class="carousel-item card-panel">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum incidunt ex porro ut fugiat iste
+                    atque maxime omnis, vel debitis quis maiores expedita doloribus quibusdam dolor itaque optio
+                    sapiente cupiditate.
+                </p>
+                <h4 class="right-align">- Anonymous</h4>
+            </div>
+            <div class="carousel-item card-panel">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum incidunt ex porro ut fugiat iste
+                    atque maxime omnis, vel debitis quis maiores expedita doloribus quibusdam dolor itaque optio
+                    sapiente cupiditate.
+                </p>
+                <h4 class="right-align">- Anonymous</h4>
+            </div>
+        </div>
+
+
+    </section>
+
+
     <section class="grey lighten-4 p-4" id="contact">
         <h3 class="text-primary fw-500 center-align">Get in Touch with us - Top Interior Designer in Delhi</h3>
         <br />
@@ -291,7 +340,19 @@
 
         $(document).ready(function () {
             $(".sidenav").sidenav();
+
+            $('#testimonial .carousel').carousel({
+                padding: 100,
+                numVisible: 3,
+                dist: 0
+            });
+            autoplayTest();
         });
+
+        function autoplayTest() {
+            $('#testimonial .carousel').carousel('next');
+            setTimeout(autoplayTest, 4500);
+        }
 
         function scrollToTop() {
             var body = $("html, body");
