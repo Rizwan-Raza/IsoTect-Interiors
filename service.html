@@ -1,0 +1,66 @@
+<?php
+// session_start();
+// print_r($_SERVER);
+// if (isset($_GET['url'])) {
+$url = explode("/", $_SERVER['PHP_SELF']);
+$url = explode(".", $url[count($url) - 1]);
+$url = $url[0];
+$GLOBALS['current_page_url'] = $url;
+require_once "../includes/fetcher.php";
+$services = array_filter(getJson("../data/services.json", "services"), function ($value) {
+    return $value['url'] == $GLOBALS['current_page_url'];
+});
+
+if (count($services) != 1) {
+    http_response_code(500);
+    // header("Location: ../5OO");
+    return;
+}
+
+foreach ($services as $service) {
+    extract($service, EXTR_SKIP);
+}
+// } else {
+//     http_response_code(404);
+//     // header("Location: ../4O4");
+//     return;
+// }
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        <?= $title ?> | IsoTect Interiors
+    </title>
+    <meta name="description" content="<?=$meta['desc']?>" />
+    <meta name="keywords" content="<?=implode(',', $meta['keywords'])?>" />
+    <base href="../" />
+    <?php chdir("../"); ?>
+    <?php include "includes/head.inc.php"; ?>
+    <style>
+        .home-banner {
+            max-height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <?php include "layouts/nav.inc.html"; ?>
+    <header>
+        <img class="lh-0 home-banner" src="images/<?=$image?>" />
+    </header>
+    <section class="py-4 px-1">
+        <div class="container">
+            <h2 class="center-align fw-500 text-primary"><?= $title ?></h2>
+            <hr class="short-border" />
+            <br />
+            <?= $desc ?>
+        </div>
+    </section>
+    <?php require_once "layouts/footer.inc.html"; ?>
+
+    <?php require_once "includes/scripts.inc.php" ?>
+</body>
+
+</html>

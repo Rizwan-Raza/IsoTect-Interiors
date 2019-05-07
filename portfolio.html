@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Portfolio | IsoTect Interiors
+    </title>
+    <meta name="description" content=" " />
+    <meta name="keywords" content=" " />
+    <?php include "includes/head.inc.php"; ?>
+    <style>
+        .home-banner {
+            max-height: 400px;
+        }
+
+        .col .card,
+        .col .card .full.pos-abs {
+            height: 200px;
+        }
+
+        .col .card>* {
+            left: 0;
+            right: 0;
+            object-fit: cover;
+        }
+
+        .col .card div {
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: all 300ms ease;
+        }
+
+        .card:hover div {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <?php include "layouts/nav.inc.html"; ?>
+    <header>
+        <img class="lh-0 home-banner" src="images/banner.jpg" />
+    </header>
+    <section class="grey lighten-4 py-4">
+        <div class="container center-align">
+            <h2 class="center-align fw-500 text-primary">Portfolio</h2>
+            <?php 
+            require_once "includes/fetcher.php";
+            $portfolios= getJson("./data/portfolio.json", "portfolio"); 
+            ?>
+            <div class="row">
+                <?php foreach ($portfolios as $portfolio) { ?>
+                <div class="col s6 m4">
+                    <div class="card lh-0 pos-rel">
+                        <img src="images/gallery/<?=$portfolio['image']?>" class="full pos-abs" />
+                        <div class="full pos-abs p-4 waves-effect waves-<?=$portfolio['theme']?>">
+                            <div class="my-4"></div>
+                            <h5 class="text-z-index-2"><?=$portfolio['title']?></h5>
+                            <p><?=$portfolio['desc']?></p>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+        </div>
+    </section>
+    <?php require_once "layouts/footer.inc.html"; ?>
+
+    <?php require_once "includes/scripts.inc.php" ?>
+</body>
+
+</html>
