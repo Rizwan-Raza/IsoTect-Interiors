@@ -3,9 +3,10 @@
 
 <head>
     <title>
-        Portfolio | IsoTect Interiors
+        Isotect Interiors Work Portfolio
     </title>
-    <meta name="description" content=" " />
+    <meta name="description"
+        content="Take a look at Isotect interiors work portfolio and hire the best professional according to your work and need." />
     <meta name="keywords" content=" " />
     <?php include "includes/head.inc.php"; ?>
     <style>
@@ -17,7 +18,6 @@
         .col .card .full.pos-abs {
             height: 200px;
         }
-
     </style>
 </head>
 
@@ -37,7 +37,8 @@
                 <?php foreach ($portfolios as $portfolio) { ?>
                 <div class="col s6 m4">
                     <div class="card lh-0 pos-rel">
-                        <img src="images/gallery/<?=$portfolio['image']?>" class="full pos-abs materialboxed waves-effect" />
+                        <img src="images/gallery/<?=$portfolio['image']?>"
+                            class="full pos-abs materialboxed waves-effect" />
                     </div>
                 </div>
                 <?php } ?>
