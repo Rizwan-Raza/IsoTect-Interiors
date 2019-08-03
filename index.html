@@ -28,8 +28,14 @@
             max-height: 400px;
         }
 
-        #features .card .card-image img {
+        #services .card .card-image img {
             filter: brightness(50%);
+            height: 240px;
+            object-fit: cover;
+        }
+
+        #services .card .card-content p {
+            text-align: justify;
         }
 
         #process .row .card-panel {
@@ -75,6 +81,12 @@
 
             header .col:not(.hide-on-small-only) .grey .bg-primary {
                 background-color: rgba(5, 96, 27, 0.75) !important;
+            }
+        }
+
+        @media (max-width: 992px) {
+            #services .d-flex {
+                display: block !important;
             }
         }
     </style>
@@ -124,56 +136,57 @@
                 </div>
             </div>
     </section>
-    <section class="grey lighten-3 py-4" id="features">
+    <section class="grey lighten-3 py-4" id="services">
         <div class="container center-align">
-            <h3 class="center-align fw-500 text-primary">Good Design Yearns for Boundless Style That is Underlined by
-                Simplicity</h3>
-            <div class="row">
-                <div class="col s12 m6 l4 p-m-3">
-                    <div class="card border-radius-8" style="overflow: hidden">
-                        <div class="card-image">
-                            <img src="images/card1.jpg">
-                            <span class="card-title fw-400 text-z-depth-2">Residential</span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light bg-primary modal-trigger"
-                                href="#instructorInfo"><i class="material-icons">launch</i></a>
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am
-                                convenient
-                                because I require little markup to use effectively.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m6 l4 p-m-3">
-                    <div class="card border-radius-8" style="overflow: hidden">
-                        <div class="card-image">
-                            <img src="images/card2.jpg">
-                            <span class="card-title fw-400 text-z-depth-2">Retail</span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light bg-primary modal-trigger"
-                                href="#instructorInfo"><i class="material-icons">launch</i></a>
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am
-                                convenient
-                                because I require little markup to use effectively.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m6 l4 p-m-3">
+            <h3 class="center-align fw-500 text-primary">Our Services</h3>
+            <div class="row d-flex">
+                <div class="col s12 m6 l4 p-m-3 d-flex">
                     <div class="card border-radius-8" style="overflow: hidden">
                         <div class="card-image">
                             <img src="images/card3.jpg">
-                            <span class="card-title fw-400 text-z-depth-2">Hospitality</span>
+                            <span class="card-title fw-400 text-z-depth-2">Renovation Work</span>
                             <a class="btn-floating halfway-fab waves-effect waves-light bg-primary modal-trigger"
-                                href="#instructorInfo"><i class="material-icons">launch</i></a>
+                                href="services/renovation-work"><i class="material-icons">launch</i></a>
                         </div>
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am
-                                convenient
-                                because I require little markup to use effectively.</p>
+                            <p>Aren’t you tired of looking at those old-fashioned furniture sets, or kitchen drawers
+                                that are hard to clean even? Probably, there must be many things in your house that are
+                                required to get replaced.</p>
                         </div>
                     </div>
                 </div>
+                <div class="col s12 m6 l4 p-m-3 d-flex">
+                    <div class="card border-radius-8" style="overflow: hidden">
+                        <div class="card-image">
+                            <img src="images/card2.jpg">
+                            <span class="card-title fw-400 text-z-depth-2">Interior Exterior Painting</span>
+                            <a class="btn-floating halfway-fab waves-effect waves-light bg-primary modal-trigger"
+                                href="services/interior-exterior-painting"><i class="material-icons">launch</i></a>
+                        </div>
+                        <div class="card-content">
+                            <p>Aren’t you sure about the role of the colors for the alluring home décor? We are sure you
+                                must be, but how often do you get your Interior & Exterior Painting done says a lot
+                                about the aesthetics and maintenance of your house.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m6 l4 p-m-3 d-flex">
+                    <div class="card border-radius-8" style="overflow: hidden">
+                        <div class="card-image">
+                            <img src="images/card1.jpg">
+                            <span class="card-title fw-400 text-z-depth-2">Metal Fabrication Work</span>
+                            <a class="btn-floating halfway-fab waves-effect waves-light bg-primary modal-trigger"
+                                href="services/metal-fabrication-work"><i class="material-icons">launch</i></a>
+                        </div>
+                        <div class="card-content">
+                            <p>Our economy depends on metal creation. Without it, we wouldn't most likely run our
+                                electrical frameworks or make the parts that keep our homes, kitchens, organizations,
+                                PCs, and vehicles operational.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
