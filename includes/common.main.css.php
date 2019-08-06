@@ -486,7 +486,7 @@
     .input-field .prefix.active,
     .input-field input:focus+label,
     .input-field textarea:focus+label {
-        color: #3d85c6 !important
+        color: #05601b !important
     }
 
     .brand-img {
@@ -689,8 +689,8 @@
 
     .input-field input:focus,
     .input-field textarea:focus {
-        border-bottom: 1px solid #3d85c6 !important;
-        box-shadow: 0 1px 0 0 #3d85c6 !important
+        border-bottom: 1px solid #05601b !important;
+        box-shadow: 0 1px 0 0 #05601b !important
     }
 
     .serviceDropDownContainer .dropdown-content {
